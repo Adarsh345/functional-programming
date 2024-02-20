@@ -8,11 +8,11 @@ public class FP01Functional {
         printAllNumbersInListFunctional(numbers);
     }
 
-    public static void printNumber(int number){
+   /* public static void printNumber(int number){
         System.out.println(number);
-    }
+    }*/
 
     private static void printAllNumbersInListFunctional(List<Integer> numbers) {
-         numbers.stream().forEach(FP01Functional::printNumber);
+         numbers.stream().forEach(System.out::println);
     }
 }

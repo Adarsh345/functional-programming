@@ -10,7 +10,9 @@ public class FP01Exercises {
         //printAllCourses(courses);
        // printSprintCourses(courses);
        // printMinimum3CharacterLengthCourses(courses);
-        printOnlyEvenNoSquare(numbers);
+       // printOnlyEvenNoSquare(numbers);
+      //  printCubeOnlyOddNumbers(numbers);
+        printCourseNameWithCourseLength(courses);
 
 
 
@@ -35,6 +37,18 @@ public class FP01Exercises {
         numbers.stream().filter(number -> number % 2 == 0)
                 .map(number -> number*number)
                 .forEach(System.out:: println);
+    }
+
+    //exercise 5 print cube only of odd numbers
+    public static void printCubeOnlyOddNumbers(List<Integer> numbers){
+        numbers.stream().filter(number -> number % 2 != 0)
+                .map(number -> number * number * number)
+                .forEach(System.out::println);
+    }
+
+    // exercise 6 print length of the course string with the course name
+    public static void printCourseNameWithCourseLength(List<String> courses){
+        courses.stream().map(course-> String.format("%s %s",course,course.length())).forEach(System.out::println);
     }
 
 

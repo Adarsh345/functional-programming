@@ -15,6 +15,14 @@ public class FP02Functional {
     }
 
     private static int addListFunctional(List<Integer> numbers) {
-       return numbers.stream().reduce(0, FP02Functional::sum);
+        //this is way to call method reference
+        //  return numbers.stream().reduce(0, FP02Functional::sum);
+
+        // using lambda expression
+        // return numbers.stream().reduce(0,(x, y) -> x + y );
+        // using Integer class predefined  method
+        return numbers.stream().reduce(0, Integer::sum);
+
+
     }
 }
